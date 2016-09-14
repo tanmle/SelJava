@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HearingFusion">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="common.MethodListener" />
+	</listeners>
+
+	<test name="Run on IE">
+		<parameter name="browser" value="chrome" />
+<!-- 	<test name="Run on IE"> -->
+<!-- 		<parameter name="browser" value="ie" /> -->
+<!-- 	<test name="Run on Firefox"> -->
+<!-- 		<parameter name="browser" value="firefox" /> -->
+		<parameter name="ipClient" value="192.168.1.109"/>
+		<parameter name="port" value="5555"/>
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+		<class name="sanityHF.sanity_001_AppointmentFlow" />
+		<class name="sanityHF.sanity_002_SalesOrderAndPostingPayment" />
+		<class name="sanityHF.sanity_003_InventoryFlow" />
+		<class name="sanityHF.sanity_004_RepairFlow" />
+		<class name="sanityHF.sanity_005_InventoryRepair" />
+		<class name="sanityHF.sanity_006_DeliveryRepair" />
+		<class name="sanityHF.sanity_007_Exchanging" />
+<class name="sanityHF.sanity_008_CaptionCall" />	
+<class name="patients.patients_001_Navigation" />
+<class name="patients.patients_002_Search" />
+<class name="patients.patients_003_NewPatient" />
+<class name="patients.patients_004_EditPatient" />
+<class name="patients.patients_005_PatientDetails" />
+<class name="patients.patients_006_PatientDetails_Insurance_Search" />
+<class name="patients.patients_007_PatientDetails_Insurance_SearchNavigation" />
+<class name="patients.patients_008_PatientDetails_Insurance_AddNewRecord" />
+<class name="patients.patients_009_PatientDetails_Hearing_Aid" />
+<class name="patients.patients_010_PatientDetails_Equipment" />
+<class name="patients.patients_011_PatientDetails_CBOBilling_AddNew" />
+<class name="patients.patients_012_PatientDetails_CBOBilling_Validation" />
+<class name="patients.patients_013_PatientDetails_AssociatedOffices_Search" />
+<class name="patients.patients_014_PatientDetails_MailingListsAndTags" />
+<class name="patients.patients_015_PatientDetails_Repairs" />
+<class name="patients.patients_016_Appointments_Search" />
+		</classes>
+	</test>
+	
+</suite> 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automation instance="HearingFusion">
+ <instances>
+  <instance tag="HearingFusion">
+   <url>http://staging.hearingfusion.com/</url>
+   <selenium ref="localchrome"/> 
+   <grid>No</grid>
+  </instance>
+ </instances>
+
+ <selenium>
+  <server tag="localfirefox">
+   <host>localhost</host>
+   <port>4444</port>
+   <driver>FirefoxDriver</driver>
+  </server>
+  <server tag="localie">
+   <host>localhost</host>
+   <port>4444</port>
+   <driver>InternetExplorerDriver</driver>
+  </server>
+  <server tag="localchrome">
+   <host>localhost</host>
+   <port>4444</port>
+   <driver>ChromeDriver</driver>
+  </server>
+ </selenium>
+</automation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HearingFusion">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="common.MethodListener" />
+	</listeners>
+
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+<!-- 	<test name="Run on IE"> -->
+<!-- 		<parameter name="browser" value="ie" /> -->
+		<parameter name="ipClient" value="192.168.1.7" />
+		<parameter name="port" value="5555" />
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+			<!-- <class name="checkinAppointment.checkinAppt_006_Insurance_SearchForCarriers" 
+				/> -->
+			<!-- <class name="checkinAppointment.checkinAppt_008_InsuranceAddNewRecord" 
+				/> -->
+			<!-- <class name="checkinAppointment.checkinAppt_009_HearingAids" /> -->
+			
+<!--  			<class name="schedule.schedule_002_EditCalendarEvent" /> -->
+<!--  			<class name="section.section_003_AppointmentScheduling" /> -->
+<!--  			<class name="section.section_004_AppointmentOutcome" /> -->
+<!--  			<class name="section.section_005_SalesOrder" /> -->
+<!--  			<class name="section.section_006_PostingPayments" /> -->
+<!--  			<class name="section.section_008_DeliveryInvoicingSalesOrder" /> -->
+<!--  			<class name="section.section_009_Repairs" /> -->
+<!-- 				<class name="section.section_010_Exchanging" /> -->
+				<class name="section.section_011_LossDamage" />
+<!-- 				<class name="section.section_012_Returns" /> -->
+<!-- 			<class name="checkinAppointment.checkinAppt_012_AssociatedOffices" /> -->
+<!-- 			<class name="checkinAppointment.checkinAppt_012_AssociatedOffices" /> -->
+<!-- 			<class name="cloudDocs.cloudDocs_001" /> -->
+<!-- 			<class name="Sanbox.Demo" /> -->
+		</classes>
+	</test>
+</suite> 

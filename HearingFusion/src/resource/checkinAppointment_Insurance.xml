@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HearingFusion">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="common.MethodListener" />
+	</listeners>
+
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<parameter name="ipClient" value="192.168.1.7"/>
+		<parameter name="port" value="5555"/>
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>				
+ 			<class name="checkinAppointment.checkinAppt_008_Insurance_AddNewRecordFindCarrier" />
+		</classes>
+	</test>
+</suite> 
